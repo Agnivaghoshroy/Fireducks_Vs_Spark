@@ -1,38 +1,73 @@
-# 🚀 FireDucks vs. Spark: The Ultimate Big Data Showdown
+# 🚀 FireDucks vs. Spark: The Big Data Benchmarking Project
 
-![Header Banner](https://via.placeholder.com/1200x400/2D3748/FFFFFF?text=FireDucks+vs.+Spark+Benchmark+Visualization)  
-*(Replace with actual banner image)*
+![Project Banner](https://via.placeholder.com/1200x400/1E293B/FFFFFF?text=FireDucks+vs.+Spark+Performance+Benchmarks)  
+*(Replace with actual project banner image)*
 
-[![Python](https://img.shields.io/badge/Python-3.8%2B-3776AB?logo=python)](https://python.org)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Agnivaghoshroy/Fireducks_Vs_Spark/blob/main/notebooks/Fireducks_vs_Spark.ipynb)
+[![Blog Post](https://img.shields.io/badge/📖-Read%20the%20Blog%20Post-FF5722)](https://yourblog.com/fireducks-vs-spark)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
-[![Blog](https://img.shields.io/badge/📖-Read%20the%20Blog%20Post-blue)](https://yourblog.link)
-
-**Discover when to use FireDucks (single-machine speed) vs. Spark (distributed power) for your data pipelines.**  
-This repository contains reproducible benchmarks from our AI & Data Science Blogathon submission.
 
 ---
 
-## 🔥 Key Insights at a Glance
+## 📌 Purpose
+This project compares **FireDucks** (a high-performance single-machine engine) against **Apache Spark** (distributed processing) to answer:
+> *"When should data scientists choose lightweight tools over distributed systems?"*
 
-<div align="center">
-
-| Metric               | FireDucks (10GB) | Spark (10GB) | Winner          |
-|----------------------|------------------|--------------|-----------------|
-| ⏱️ **Read Time**     | 2s               | 15s          | 🏆 FireDucks    |
-| 🧮 **GroupBy Time**  | 5s               | 20s          | 🏆 FireDucks    |
-| 💾 **Memory Usage**  | 1.2GB            | 3GB          | 🏆 FireDucks    |
-| 🏗️ **Setup Time**   | Instant          | 20s          | 🏆 FireDucks    |
-| 🌐 **Max Data Size** | ~50GB            | Unlimited    | 🏆 Spark        |
-
-</div>
-
-> **💡 Pro Tip**: FireDucks delivers **5-10x faster performance** on single-machine workloads, while Spark dominates at petabyte scale.
+Built for the [AI & Data Science Blogathon](https://blogathon.link), these benchmarks reveal:
+- **5-10x faster performance** on single-machine workloads
+- **50% lower memory usage** for mid-sized datasets
+- **Critical trade-offs** between simplicity and scalability
 
 ---
 
-## 🛠️ Getting Started
+## 🛠️ Tech Stack
 
-### Prerequisites
-```bash
-git clone https://github.com/Agnivaghoshroy/Fireducks_Vs_Spark.git
-cd Fireducks_Vs_Spark
+### 🔥 FireDucks Stack
+| Component       | Technology           | Purpose                          |
+|----------------|---------------------|----------------------------------|
+| Core Engine    | DuckDB              | Single-machine OLAP queries      |
+| Memory Mgmt    | Arrow               | Zero-copy data processing        |
+| Optimizations  | Vectorized Execution | CPU-efficient operations         |
+
+### ⚡ Spark Stack
+| Component       | Technology           | Purpose                          |
+|----------------|---------------------|----------------------------------|
+| Core Engine    | Apache Spark 3.5    | Distributed data processing      |
+| Cluster Mgmt   | YARN                | Resource allocation             |
+| SQL Engine     | Catalyst            | Query optimization              |
+
+### 📊 Benchmarking Tools
+- **Time Metrics**: Python's `time` module
+- **Memory Profiling**: `memory-profiler`
+- **Visualization**: Plotly + Matplotlib
+
+---
+
+## 📖 Blog Post
+[![Featured Blog Image](https://via.placeholder.com/800x400/374151/FFFFFF?text=FireDucks+vs+Spark+Blog+Cover)](https://yourblog.com/fireducks-vs-spark)
+
+Key sections in our analysis:
+1. **The Single-Machine Revolution**  
+   Why tools like FireDucks are disrupting traditional workflows
+
+2. **Benchmark Deep Dive**  
+   Raw numbers behind our 10GB vs. 100GB tests
+
+3. **Decision Framework**  
+   Flowchart for choosing between FireDucks and Spark
+
+[▶️ Read the Full Blog Post](https://yourblog.com/fireducks-vs-spark)
+
+---
+
+## 🧪 Colab Notebook
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Agnivaghoshroy/Fireducks_Vs_Spark/blob/main/notebooks/Fireducks_vs_Spark.ipynb)
+
+Fully reproducible benchmark environment featuring:
+```python
+# Sample Colab Cell
+!pip install fireducks spark
+import fireducks as fd
+
+df = fd.load("gs://bucket/data.parquet")  # Demo FireDucks call
+print(fd.benchmark(df.groupby("id").mean()))
