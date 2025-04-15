@@ -1,8 +1,5 @@
 # 🚀 FireDucks vs. Spark: The Big Data Benchmarking Project
 
-![Project Banner](https://via.placeholder.com/1200x400/1E293B/FFFFFF?text=FireDucks+vs.+Spark+Performance+Benchmarks)  
-*(Replace with actual project banner image)*
-
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Agnivaghoshroy/Fireducks_Vs_Spark/blob/main/notebooks/Fireducks_vs_Spark.ipynb)
 [![Blog Post](https://img.shields.io/badge/📖-Read%20the%20Blog%20Post-FF5722)](https://yourblog.com/fireducks-vs-spark)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
