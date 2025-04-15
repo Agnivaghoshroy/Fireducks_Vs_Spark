@@ -53,15 +53,7 @@ https://docs.google.com/document/d/1EQmkEs458scQnfgqVZHMNocOwww_XoKUQOQEqSqah8M/
 ## 🧪 Colab Notebook
 https://colab.research.google.com/drive/1FcA9B0NXs_WODtJ2WoXppTqRGQ5FGua1?usp=sharing
 
-Fully reproducible benchmark environment featuring:
-```python
-# Sample Colab Cell
-!pip install fireducks spark
-import fireducks as fd
-
 ---
-
-## 🛠️ Getting Started
 
 ### Prerequisites
 ```bash
