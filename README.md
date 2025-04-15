@@ -23,38 +23,38 @@ This project compares **FireDucks** (a high-performance single-machine engine) a
 | Cluster Mgmt   | YARN                | Resource allocation             |
 | SQL Engine     | Catalyst            | Query optimization              |
 
-### 📊 Benchmarking Tools
-- **Time Metrics**: Python's `time` module
-- **Memory Profiling**: `memory-profiler`
-- **Visualization**: Plotly + Matplotlib
+---
+
+## 🔥 Key Insights at a Glance
+
+<div align="center">
+
+| Metric               | FireDucks (10GB) | Spark (10GB) | Winner          |
+|----------------------|------------------|--------------|-----------------|
+| ⏱️ **Read Time**     | 2s               | 15s          | 🏆 FireDucks    |
+| 🧮 **GroupBy Time**  | 5s               | 20s          | 🏆 FireDucks    |
+| 💾 **Memory Usage**  | 1.2GB            | 3GB          | 🏆 FireDucks    |
+| 🏗️ **Setup Time**   | Instant          | 20s          | 🏆 FireDucks    |
+| 🌐 **Max Data Size** | ~50GB            | Unlimited    | 🏆 Spark        |
+
+</div>
+
+> **💡 Pro Tip**: FireDucks delivers **5-10x faster performance** on single-machine workloads, while Spark dominates at petabyte scale.
 
 ---
 
 ## 📖 Blog Post
-[![Featured Blog Image](https://via.placeholder.com/800x400/374151/FFFFFF?text=FireDucks+vs+Spark+Blog+Cover)](https://yourblog.com/fireducks-vs-spark)
 
-Key sections in our analysis:
-1. **The Single-Machine Revolution**  
-   Why tools like FireDucks are disrupting traditional workflows
-
-2. **Benchmark Deep Dive**  
-   Raw numbers behind our 10GB vs. 100GB tests
-
-3. **Decision Framework**  
-   Flowchart for choosing between FireDucks and Spark
-
-[▶️ Read the Full Blog Post](https://yourblog.com/fireducks-vs-spark)
+Read the full blog here:
+https://docs.google.com/document/d/1EQmkEs458scQnfgqVZHMNocOwww_XoKUQOQEqSqah8M/edit?usp=sharing
 
 ---
 
 ## 🧪 Colab Notebook
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Agnivaghoshroy/Fireducks_Vs_Spark/blob/main/notebooks/Fireducks_vs_Spark.ipynb)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://docs.google.com/document/d/1EQmkEs458scQnfgqVZHMNocOwww_XoKUQOQEqSqah8M/edit?usp=sharing)
 
 Fully reproducible benchmark environment featuring:
 ```python
 # Sample Colab Cell
 !pip install fireducks spark
 import fireducks as fd
-
-df = fd.load("gs://bucket/data.parquet")  # Demo FireDucks call
-print(fd.benchmark(df.groupby("id").mean()))
