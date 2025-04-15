@@ -51,10 +51,19 @@ https://docs.google.com/document/d/1EQmkEs458scQnfgqVZHMNocOwww_XoKUQOQEqSqah8M/
 ---
 
 ## 🧪 Colab Notebook
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://docs.google.com/document/d/1EQmkEs458scQnfgqVZHMNocOwww_XoKUQOQEqSqah8M/edit?usp=sharing)
+https://colab.research.google.com/drive/1FcA9B0NXs_WODtJ2WoXppTqRGQ5FGua1?usp=sharing
 
 Fully reproducible benchmark environment featuring:
 ```python
 # Sample Colab Cell
 !pip install fireducks spark
 import fireducks as fd
+
+---
+
+## 🛠️ Getting Started
+
+### Prerequisites
+```bash
+git clone https://github.com/Agnivaghoshroy/Fireducks_Vs_Spark.git
+cd Fireducks_Vs_Spark
