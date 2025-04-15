@@ -3,13 +3,7 @@
 ---
 
 ## 📌 Purpose
-This project compares **FireDucks** (a high-performance single-machine engine) against **Apache Spark** (distributed processing) to answer:
-> *"When should data scientists choose lightweight tools over distributed systems?"*
-
-Built for the [AI & Data Science Blogathon](https://blogathon.link), these benchmarks reveal:
-- **5-10x faster performance** on single-machine workloads
-- **50% lower memory usage** for mid-sized datasets
-- **Critical trade-offs** between simplicity and scalability
+This project compares **FireDucks** (a high-performance single-machine engine) against **Spark** (distributed processing) to answer:
 
 ---
 
